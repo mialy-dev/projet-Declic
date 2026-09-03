@@ -19,9 +19,16 @@ export function BlackHole({ className }: { className?: string }) {
 
   return (
     <div className={cn("absolute inset-0 overflow-hidden bg-background", className)}>
-      <canvas ref={canvasRef} className="h-full w-full" aria-hidden="true" />
+      {/* Fallback halo when WebGL is unavailable */}
+      <div
+        aria-hidden="true"
+        className="absolute left-1/2 top-1/2 size-[70vmin] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-70 blur-3xl"
+        style={{ backgroundImage: "var(--gradient-halo)" }}
+      />
+      <canvas ref={canvasRef} className="relative h-full w-full" aria-hidden="true" />
     </div>
   );
 }
+
 
 export default BlackHole;
