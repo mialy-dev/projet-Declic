@@ -152,3 +152,31 @@
     color: var(--color-foreground);
   }
 }
+
+@theme inline {
+  --font-display: var(--font-display);
+  --font-sans: var(--font-body);
+}
+
+@layer base {
+  body {
+    font-family: var(--font-body);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+@utility text-halo {
+  background-image: var(--gradient-halo);
+  background-clip: text;
+  color: transparent;
+}
+
+@utility shadow-halo {
+  box-shadow: var(--shadow-halo);
+}
