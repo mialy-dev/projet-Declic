@@ -6,13 +6,13 @@ import { Button } from "@/components/ui/button";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Déclic Madagascar — Studio digital & créatif" },
+      { title: "Formation Digital — Déclic Madagascar" },
       {
         name: "description",
         content:
           "Déclic Madagascar conçoit des sites, applications et identités visuelles qui font décoller les marques malgaches.",
       },
-      { property: "og:title", content: "Déclic Madagascar — Studio digital & créatif" },
+      { property: "og:title", content: "Formation Digital — Déclic Madagascar" },
       {
         property: "og:description",
         content:
@@ -73,7 +73,7 @@ function Index() {
             Studio digital · Antananarivo
           </span>
           <h1 className="mt-6 text-balance text-5xl font-bold leading-[1.05] sm:text-7xl">
-            Le <span className="text-halo">déclic</span> qui met votre marque en orbite
+            Formation <span className="text-halo">Digital</span>
           </h1>
           <p className="mt-6 max-w-xl text-pretty text-base text-muted-foreground sm:text-lg">
             Nous créons des expériences web et mobiles qui attirent l&apos;attention
